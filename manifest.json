@@ -1,0 +1,30 @@
+{
+  "name": "PIT",
+  "version": "1.0",
+  "description": "PIT - Pass it through / Reicht es durch",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "icons": {
+    "16": "./img/icon/icon16.png",
+    "32": "./img/icon/icon16.png",
+    "48": "./img/icon/icon48.png",
+    "72": "./img/icon/icon48.png",
+    "128": "./img/icon/icon128.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "js": [
+        "checker.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
