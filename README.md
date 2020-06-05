@@ -34,7 +34,7 @@ Da wir die Sorge haben, dass die Mehrwertsteuersenkung nicht und Verbraucher*inn
 - Mit o.g. Erwähnung können wir mögliche schwarze Schafe besser identifizieren und dies transparent und sichtbar machen.
 
 
-### Mach mit und helfe, Transparenz zu schaffen die allen nützt
+### Mach mit und hilf, Transparenz zu schaffen die allen nützt
 
 
 ### Mitmachen
