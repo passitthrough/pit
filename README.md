@@ -14,7 +14,7 @@ Momentan arbeiten wir mit Hochdruck an einer Chrome-Extension (Browsererweiterun
 und Dir neben dem aktuellen Preis einen ermäßigten, theoretisch möglichen Preis darstellt, der bei einer vollständig durchgereichten 
 Mehrwertsteuersenkung möglich wäre.
 
-Da wir die Sorge haben, dass die Mehrwertsteuersenkung nicht and Verbraucher*innen durchgereicht wird, kann jeder mit der
+Da wir die Sorge haben, dass die Mehrwertsteuersenkung nicht und Verbraucher*innen durchgereicht wird, kann jeder mit der
  Absicht demnächst Anschaffungen zu tätigen heute schon etwas tun.
   
 **Gehe wie folgt vor:**
@@ -39,6 +39,16 @@ Du hast Lust mitzumachen, bist fit in IT, Social Media, oder einem anderen relev
 Dann melde Dich sehr gerne.
 
 
+### Hall of shame
+
+**Diese Onlinehändler sind besonders negativ aufgefallen**
+
+> coming hopefully not soon
+
+
+ 
+
+
 ### Contributors
 
 - Bernhard Behrendt
@@ -54,5 +64,9 @@ Mehrwertsteuer sichtbar macht.
 Vom 01.07.2020 an wird diese App nicht mehr funktionsfähig sein. Sie bietet ausschließlich eine Transparenz innerhalb des
 Zeitraum bis zum Inkrafttreten der neuen Mehrwertsteuersätze.
 
+### Links zum Thema
 
+- [Spiegel - Der große Knackpunkt der niedrigen Mehrwertsteuer]
+
+[Spiegel - Der große Knackpunkt der niedrigen Mehrwertsteuer]: https://www.spiegel.de/wirtschaft/service/corona-konjunkturpaket-der-grosse-knackpunkt-der-niedrigen-mehrwertsteuer-a-d3b357fc-e472-4db8-aa09-53d9faff6859
 [banner]: https://i.imgur.com/JFFsB96.png "PIT Banner"
