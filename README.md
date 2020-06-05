@@ -57,6 +57,10 @@ Dann melde Dich sehr gerne.
 
 ### Disclaimer
 
+PIT sammelt keine Daten und spioniert dich **nicht** aus. 
+Sofern wir im Verlauf dieses Projekts einen Nutzen für die zentrale Speicherung von Daten sehen, werden wir dich proaktiv
+um Erlaubnis fragen. 
+
 PIT wird entwickelt für Verbraucher mit dem Ansatz der Transparenz. 
 Es ist eine Extension für den Chrome-Browser, die an Preisen in Onlineshops die mögliche Ersparnis durch die Senkung der 
 Mehrwertsteuer sichtbar macht.  
