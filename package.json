@@ -7,7 +7,7 @@
     "develop": "npm run clean && parcel --no-cache ./src/console.html",
     "build": "NODE_ENV=production npm run build:pit && npm run build:for:chrome && npm run build:for:firefox && npm run build:for:safari",
     "build:pit": "npm run clean && parcel build ./src/index.html --no-content-hash pit.ts --no-cache",
-    "build:for:chrome": "cat ./dist/*.js > chrome-extension/pit.js && cat ./dist/*.css > chrome-extension/pit.css && cp README.md chrome-extension/README.md",
+    "build:for:chrome": "cat ./dist/*.js > extensions/chrome/pit.js && cat ./dist/*.css > chrome/pit.css && cp README.md chrome/README.md",
     "build:for:firefox": "echo firefox::NOT_IMPLEMENTED",
     "build:for:safari": "echo safari::NOT_IMPLEMENTED",
     "clean": "rm -rf ./dist 2> /dev/null && rm -rf ./.cache 2> /dev/null",
