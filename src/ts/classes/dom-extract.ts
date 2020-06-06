@@ -21,6 +21,7 @@ export class DomExtract {
                     let nodeText: string = potentialTextNode.nodeValue;
 
                     return (
+                        typeof node.className === 'string' &&
                         node.className.indexOf(Flag.CLASS_EXCLUDE_ITEM) === -1 &&
                         (
                             nodeText.indexOf(PriceIndication.CURRENCY_SYMBOL) !== -1 ||

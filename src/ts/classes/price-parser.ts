@@ -1,8 +1,9 @@
 export class PriceParser {
     public parse(textContainingOnePrice) {
-        return parseInt(textContainingOnePrice
+        return parseFloat(
+            textContainingOnePrice
                 .replace(/[^0-9,]/g, '')
-                .replace(/,/g, '.'),
-            10);
+                .replace(/,/g, '.')
+        );
     }
 }

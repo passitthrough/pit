@@ -50,7 +50,7 @@ export class DomExtend {
                 node: textNode,
                 price: price,
                 // TODO create element scripted/templated
-                extend: '<span class="pitprice ' + Flag.CLASS_EXCLUDE_ITEM + '">-3%MwSt. ~' + pitPrice + PriceIndication.CURRENCY_SYMBOL + '< /span>',
+                extend: '<span class="pitprice ' + Flag.CLASS_EXCLUDE_ITEM + '">-3%MwSt. ~' + pitPrice + PriceIndication.CURRENCY_SYMBOL + '</span>',
                 applied: false
             });
         }

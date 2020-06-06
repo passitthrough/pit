@@ -4,10 +4,12 @@
   "description": "Wir schaffen mehr Transparenz in der Mehrwertsteuer-Senkung!",
   "main": "dist/pit.js",
   "scripts": {
-    "develop": "npm run clean && parcel --no-cache src/entrypoint.develop.html",
+    "postinstall": "npm run build",
     "build": "NODE_ENV=production npm run build:pit && npm run build:for:chrome && npm run build:for:firefox && npm run build:for:safari",
-    "build:pit": "npm run clean && parcel build src/entrypoint.production.html --no-content-hash pit.ts --no-cache",
-    "build:for:chrome": "cat ./dist/*.js > ./extensions/chrome/pit.js && cat ./dist/*.css > ./extensions/chrome/pit.css && cp README.md ./extensions/chrome/README.md",
+    "develop": "npm run clean && parcel src/entrypoint.develop.html --no-cache",
+    "build:pit": "npm run clean && parcel build src/entrypoint.production.html --no-content-hash pit.ts --no-source-maps --no-cache",
+    "build:settings:for:chrome": "parcel build src/settings.html --out-dir ./tmp  --no-cache --no-source-maps && mv ./tmp/settings.html ./extensions/chrome/ && rm -rf ./tmp",
+    "build:for:chrome": "npm run build:settings:for:chrome && cat ./dist/*.js > ./extensions/chrome/pit.js && cat ./dist/*.css > ./extensions/chrome/pit.css && cp README.md ./extensions/chrome/README.md",
     "build:for:firefox": "echo firefox::NOT_IMPLEMENTED",
     "build:for:safari": "echo safari::NOT_IMPLEMENTED",
     "clean": "rm -rf ./dist 2> /dev/null && rm -rf ./.cache 2> /dev/null",
@@ -17,6 +19,7 @@
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-html": "https://github.com/BernhardBehrendt/parcel-plugin-html.git#master",
     "parcel-plugin-imagemin": "^4.0.1",
+    "parcel-plugin-inline-source": "^1.0.0",
     "posthtml-include": "^1.4.3",
     "sass": "^1.26.8",
     "typescript": "^3.9.5"

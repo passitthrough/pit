@@ -7,7 +7,7 @@ export class Observer {
     private interval;
 
     constructor(
-        public frequency: number = 5000,
+        public frequency: number = 500,
         public selector: string = '*'
     ) {
         this.isShop = new Detector().isOnlineshop();
@@ -21,10 +21,11 @@ export class Observer {
 
     public start() {
         if (!this.interval && this.isShop) {
-            console.info('PIT::started');
+
+            this.exec();
 
             this.interval = setInterval(() => {
-                new DomExtend(new DomExtract(this.selector).getTextNodes()).apply();
+                this.exec();
             }, this.frequency)
         }
     }
@@ -34,5 +35,9 @@ export class Observer {
             clearInterval(this.interval);
             console.info('PIT::stopped');
         }
+    }
+
+    private exec() {
+        new DomExtend(new DomExtract(this.selector).getTextNodes()).apply();
     }
 }

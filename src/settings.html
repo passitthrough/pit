@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>PIT Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link inline="inline" rel="stylesheet" href="scss/settings.scss">
+</head>
+<body>
+<div id="settings">
+    <form>
+        <h1>PIT</h1>
+        <h3>pass it through | reich's durch</h3>
+
+
+        <label for="rateReduced">
+            <input id="rateReduced" type="radio" value="2" name="rate"/>
+            <span>05% statt 07%|<strong>-2%MwSt..</strong></span>
+        </label>
+
+        <label for="rateNormal">
+            <input id="rateNormal" type="radio" value="2" name="rate"/>
+            <span>16% statt 19%|<strong>-3%MwSt..</strong></span>
+        </label>
+
+    </form>
+</div>
+
+<div id="credits">get in touch on
+    <a href="https://twitter.com/passitthrough" target="_blank" rel="noreferrer">Twitter</a> | contribute on
+    <a href="https://github.com/passitthrough/pit/" target="_blank" rel="noreferrer">GitHub</a>
+</div>
+
+<script src="ts/settings.ts" inline="inline"></script>
+</body>
+</html>
