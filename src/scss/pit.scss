@@ -1,0 +1,44 @@
+.calculated {}
+
+.pitprice {
+  background-color: #000;
+  color: #fff;
+  font-size: 11px;
+  font-family: sans-serif;
+  padding: 2px;
+  max-width: 100%;
+}
+
+.hint {
+  font-size: 10px;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none !important;
+}
+
+
+.pitheader {
+  position: fixed;
+  z-index: 10000;
+
+  background-color: #000;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 64px;
+
+  clear: both;
+  padding-top: 6px;
+}
+
+#showPitPricesBtn {
+  float: right;
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 0;
+}
+
+.pithidden {
+  display: none !important;
+}

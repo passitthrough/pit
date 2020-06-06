@@ -1,3 +1,8 @@
+import {DomExtract} from './dom-extract';
+
+console.log('PIT RUNNING');
+
+
 const showPitPrices = () => {
     let hiddenNodes = document.querySelectorAll('.pithidden');
 
@@ -16,7 +21,7 @@ setInterval(() => {
     if (matches > 0 && !headerNotInjected) {
         let body = document.getElementsByTagName('body')[0];
 
-        body.innerHTML = prependHeader + body.innerHTML;
+        //   body.innerHTML = prependHeader + body.innerHTML;
         headerNotInjected = true;
 
         requestAnimationFrame(() => {
@@ -26,6 +31,12 @@ setInterval(() => {
         });
     }
 
+    let domExtractor = new DomExtract();
+
+    let textNodes = domExtractor.getTextNodes();
+
+    console.log(textNodes);
+
     let nodes = document.querySelectorAll('*');
 
     nodes.forEach((currentNode) => {
@@ -33,6 +44,7 @@ setInterval(() => {
         const isTextNode = !!currentNode.childNodes[0] && typeof currentNode.childNodes[0].nodeValue === 'string';
 
         if (isTextNode) {
+
             let text = textNode.nodeValue;
 
             if (
@@ -51,7 +63,7 @@ setInterval(() => {
                 if (typeof priceNumber === 'number') {
                     let betterPrice = (priceNumber * .97).toFixed(2);
                     currentNode.className += ' calculated';
-                    currentNode.innerHTML += ' <span class="pithidden pitprice calculated">PITPRICE* ~' + betterPrice + 'EUR </span>';
+                    currentNode.innerHTML += ' <span class="pitprice calculated">PITPRICE* ~' + betterPrice + 'EUR </span>';
 
                     matches += 1;
                 }
@@ -61,6 +73,8 @@ setInterval(() => {
 }, 1000);
 
 
+const findRelevantNodes = () => {
 
+}
 
 

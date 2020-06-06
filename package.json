@@ -1,0 +1,44 @@
+{
+  "name": "pit",
+  "version": "1.0.0",
+  "description": "Wir schaffen mehr Transparenz in der Mehrwertsteuer-Senkung!",
+  "main": "dist/pit.js",
+  "scripts": {
+    "develop": "npm run clean && parcel --no-cache ./src/console.html",
+    "build": "NODE_ENV=production npm run build:pit && npm run build:for:chrome && npm run build:for:firefox && npm run build:for:safari",
+    "build:pit": "npm run clean && parcel build ./src/index.html --no-content-hash pit.ts --no-cache",
+    "build:for:chrome": "cat ./dist/*.js > chrome-extension/pit.js && cat ./dist/*.css > chrome-extension/pit.css && cp README.md chrome-extension/README.md",
+    "build:for:firefox": "echo firefox::NOT_IMPLEMENTED",
+    "build:for:safari": "echo safari::NOT_IMPLEMENTED",
+    "clean": "rm -rf ./dist 2> /dev/null && rm -rf ./.cache 2> /dev/null",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-html": "https://github.com/BernhardBehrendt/parcel-plugin-html.git#master",
+    "parcel-plugin-imagemin": "^4.0.1",
+    "posthtml-include": "^1.4.3",
+    "sass": "^1.26.8",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.38",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/passitthrough/pit.git"
+  },
+  "keywords": [
+    "transparency",
+    "community",
+    "solidarity"
+  ],
+  "author": "Bernhard Behrendt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/passitthrough/pit/issues"
+  },
+  "homepage": "https://github.com/passitthrough/pit#readme"
+}

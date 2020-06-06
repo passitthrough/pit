@@ -17,10 +17,10 @@
   "content_scripts": [
     {
       "js": [
-        "checker.js"
+        "pit.js"
       ],
       "css": [
-        "style.css"
+        "pit.css"
       ],
       "matches": [
         "<all_urls>"
