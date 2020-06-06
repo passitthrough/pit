@@ -23,9 +23,11 @@ Da wir die Sorge haben, dass die Mehrwertsteuersenkung nicht und Verbraucher*inn
 ## Manuelle Installation (Chrome)
 
 Weil bis zur Fertigstellung des ersten `stable`-Releases, PIT nicht im "google web store" erhältlich sein wird
-ist derzeit ausschließliche die manuelle installation möglich. Gehe dazu wie folgt vor:
+ist derzeit ausschließliche die manuelle installation möglich. 
+
+Gehe dazu wie folgt vor:
  
-Quelle: [Google]
+> Quelle: [Google]
 > 1. Open the Extension Management page by navigating to `chrome://extensions`.
 > 2. Enable Developer Mode by clicking the toggle switch next to Developer mode.
 > 3. Click the LOAD UNPACKED button and select the extension directory.
