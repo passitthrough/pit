@@ -25,9 +25,6 @@ export class DomExtend {
                 queueItem.node.className += Flag.WHITESPACE + Flag.CLASS_EXCLUDE_ITEM;
                 queueItem.node.innerHTML += queueItem.extend;
 
-
-
-
                 queueItem.applied = true;
             });
     }
