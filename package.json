@@ -1,13 +1,13 @@
 {
   "name": "pit-extension",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "description": "Wir schaffen mehr Transparenz in der Mehrwertsteuer-Senkung!",
   "scripts": {
-    "postinstall": "npm run build",
+    "postinstall": "pwd && ls -lah && npm run build",
     "build": "NODE_ENV=production npm run build:pit && npm run build:for:chrome && npm run build:for:firefox && npm run build:for:safari",
-    "develop": "npm run clean && ./node_modules/.bin/parcel src/entrypoint.develop.html --no-cache",
-    "build:pit": "npm run clean && ./node_modules/.bin/parcel build src/entrypoint.production.html --no-content-hash pit.ts --no-source-maps --no-cache",
-    "build:settings:for:chrome": "./node_modules/.bin/parcel build src/settings.html --out-dir ./tmp  --no-cache --no-source-maps && mv ./tmp/settings.html ./extensions/chrome/ && rm -rf ./tmp",
+    "develop": "npm run clean && parcel src/entrypoint.develop.html --no-cache",
+    "build:pit": "npm run clean && parcel build src/entrypoint.production.html --no-content-hash pit.ts --no-source-maps --no-cache",
+    "build:settings:for:chrome": "parcel build src/settings.html --out-dir ./tmp  --no-cache --no-source-maps && mv ./tmp/settings.html ./extensions/chrome/ && rm -rf ./tmp",
     "build:for:chrome": "npm run build:settings:for:chrome && cat ./dist/*.js > ./extensions/chrome/pit.js && cat ./dist/*.css > ./extensions/chrome/pit.css && cp README.md ./extensions/chrome/README.md",
     "build:for:firefox": "echo firefox::NOT_IMPLEMENTED",
     "build:for:safari": "echo safari::NOT_IMPLEMENTED",
