@@ -37,7 +37,7 @@ Gehe dazu wie folgt vor:
 Der Extension Ordner ist: `extensions/chrome`
 
 
-### Ablauf
+## Ablauf
 
 - Du planst eine Anschaffung in der nächsten Zeit?
 - suche das Produkt, dass du dir anschaffen möchtest bei einem Onlinehändler Deiner Wahl
