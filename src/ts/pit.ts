@@ -1,5 +1,7 @@
-import {DomExtract} from './dom-extract';
+import {DomExtract} from './classes/dom-extract';
 import {Flag} from './enums/flag';
+import {PriceParser} from './classes/price-parser';
+import {DomExtend} from './classes/dom-extend';
 
 console.log('PIT RUNNING');
 
@@ -15,7 +17,6 @@ const showPitPrices = () => {
 
 let matches = 0;
 let headerNotInjected = false;
-let prependHeader = '<div class="pitheader"><button id="showPitPricesBtn">Zeige PIT-Preise</button></div>';
 
 
 setInterval(() => {
@@ -32,33 +33,12 @@ setInterval(() => {
         });
     }
 
-    let domExtractor = new DomExtract();
-
-    let textNodes = domExtractor.getTextNodes();
+    let domExtender = new DomExtend(new DomExtract().getTextNodes());
 
 
-    textNodes
-        .forEach((currentNode) => {
-
-            let price = currentNode
-                .childNodes[0]
-                .nodeValue
-                .replace(/[^0-9,]/g, '')
-                .replace(/,/g, '.');
+    domExtender.apply();
 
 
-            let priceNumber = parseInt(price, 10);
-
-            if (typeof priceNumber === 'number') {
-                let betterPrice = (priceNumber * .97).toFixed(2);
-                currentNode.className += Flag.WHITESPACE + Flag.CLASS_EXCLUDE_ITEM;
-                currentNode.innerHTML += ' <span class="pitprice ' + Flag.CLASS_EXCLUDE_ITEM + '">PITPRICE* ~' + betterPrice + 'EUR </span>';
-
-                matches += 1;
-            }
-
-
-        });
 }, 1000);
 
 

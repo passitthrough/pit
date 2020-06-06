@@ -1,19 +1,16 @@
-import {PriceIndication} from './enums/price-indication';
-import {Flag} from './enums/flag';
+import {PriceIndication} from '../enums/price-indication';
+import {Flag} from '../enums/flag';
 
 export class DomExtract {
-    private readonly domNodes: NodeListOf<Element>;
+    private domNodes: NodeListOf<Element>;
     private filter = Array.prototype.filter;
 
-    constructor(selector: string = '*') {
-        this.domNodes = document.querySelectorAll(selector);
+    constructor(public selector: string = '*') {
+        this.fetchNodes();
     }
 
-
     public getTextNodes(): NodeListOf<Element> {
-        console.log('Init extraction');
-
-        let filtered = this
+        return this
             .filter
             .call(this.domNodes, function (node: Element) {
                 const potentialTextNode = node.childNodes[0];
@@ -39,9 +36,11 @@ export class DomExtract {
 
                 return false;
             });
-
-
-        return filtered;
     }
 
+    // TODO maybe update method
+
+    private fetchNodes() {
+        return this.domNodes = document.querySelectorAll(this.selector);
+    }
 }

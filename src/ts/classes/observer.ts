@@ -1,14 +1,14 @@
 import {DomExtract} from './dom-extract';
-import {ShopDetector} from './shop-detector';
+import {Detector} from './detector';
 
 export class Observer {
-    private shopDetector: ShopDetector;
+    private shopDetector: Detector;
     private domExtractor: DomExtract;
 
     constructor(interval: number = 5000, selector: string = '*') {
-        this.shopDetector = new ShopDetector();
+        this.shopDetector = new Detector();
 
-        if (this.shopDetector.dermineIfCurrentPageIsAShop()) {
+        if (this.shopDetector.isOnlineshop()) {
             this.domExtractor = new DomExtract(selector);
         }
 
