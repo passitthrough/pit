@@ -25,7 +25,14 @@ Da wir die Sorge haben, dass die Mehrwertsteuersenkung nicht und Verbraucher*inn
 Weil bis zur Fertigstellung des ersten `stable`-Releases, PIT nicht im "google web store" erhältlich sein wird
 ist derzeit ausschließliche die manuelle installation möglich. 
 
-Gehe dazu wie folgt vor:
+**Gehe dazu wie folgt vor:**
+ 
+ Der Programmcode kann auf verschiedenen Wegen bezogen werden:
+ 
+- GIT  `git clone https://github.com/passitthrough/pit.git`
+- NPM  `npm install pit-extension`
+- [zip Archiv] von gitHub downloaden 
+ 
  
 > Quelle: [Google]
 > 1. Open the Extension Management page by navigating to `chrome://extensions`.
@@ -97,3 +104,4 @@ Zeitraum bis zum Inkrafttreten der neuen Mehrwertsteuersätze.
 [Google]: https://developer.chrome.com/extensions/getstarted
 [banner]: https://i.imgur.com/JFFsB96.png "PIT Banner"
 [installchromemanually]: https://developer.chrome.com/static/images/get_started/load_extension.png "Chrome install extension manually"
+[zip Archiv]:https://github.com/passitthrough/pit/archive/master.zip "Extension Download"
