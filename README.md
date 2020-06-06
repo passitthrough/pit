@@ -28,6 +28,7 @@ ist derzeit ausschließliche die manuelle installation möglich. Gehe dazu wie f
 Quelle: [Google]
 > 1. Enable Developer Mode by clicking the toggle switch next to Developer mode.
 > 2. Click the LOAD UNPACKED button and select the extension directory.
+
 > ![alt text][installchromemanually]
 
 Der Extension Ordner ist: `extensions/chrome`

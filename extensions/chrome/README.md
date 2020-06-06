@@ -19,7 +19,21 @@ Mehrwertsteuersenkung möglich wäre.
 
 Da wir die Sorge haben, dass die Mehrwertsteuersenkung nicht und Verbraucher*innen durchgereicht wird, kann jeder mit der
  Absicht demnächst Anschaffungen zu tätigen heute schon etwas tun.
-  
+
+## Manuelle Installation (Chrome)
+
+Weil bis zur Fertigstellung des ersten `stable`-Releases, PIT nicht im "google web store" erhältlich sein wird
+ist derzeit ausschließliche die manuelle installation möglich. Gehe dazu wie folgt vor:
+ 
+Quelle: [Google]
+> 1. Enable Developer Mode by clicking the toggle switch next to Developer mode.
+> 2. Click the LOAD UNPACKED button and select the extension directory.
+
+> ![alt text][installchromemanually]
+
+Der Extension Ordner ist: `extensions/chrome`
+
+
 **Gehe wie folgt vor:**
 
 - Du planst eine Anschaffung in der nächsten Zeit?
@@ -77,4 +91,6 @@ Zeitraum bis zum Inkrafttreten der neuen Mehrwertsteuersätze.
 - [Spiegel - Der große Knackpunkt der niedrigen Mehrwertsteuer]
 
 [Spiegel - Der große Knackpunkt der niedrigen Mehrwertsteuer]: https://www.spiegel.de/wirtschaft/service/corona-konjunkturpaket-der-grosse-knackpunkt-der-niedrigen-mehrwertsteuer-a-d3b357fc-e472-4db8-aa09-53d9faff6859
+[Google]: https://developer.chrome.com/extensions/getstarted
 [banner]: https://i.imgur.com/JFFsB96.png "PIT Banner"
+[installchromemanually]: https://developer.chrome.com/static/images/get_started/load_extension.png "Chrome install extension manually"
