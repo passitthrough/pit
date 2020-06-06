@@ -1,4 +1,5 @@
 import {DomExtract} from './dom-extract';
+import {Flag} from './enums/flag';
 
 console.log('PIT RUNNING');
 
@@ -35,41 +36,29 @@ setInterval(() => {
 
     let textNodes = domExtractor.getTextNodes();
 
-    console.log(textNodes);
 
-    let nodes = document.querySelectorAll('*');
+    textNodes
+        .forEach((currentNode) => {
 
-    nodes.forEach((currentNode) => {
-        let textNode = currentNode.childNodes[0];
-        const isTextNode = !!currentNode.childNodes[0] && typeof currentNode.childNodes[0].nodeValue === 'string';
+            let price = currentNode
+                .childNodes[0]
+                .nodeValue
+                .replace(/[^0-9,]/g, '')
+                .replace(/,/g, '.');
 
-        if (isTextNode) {
 
-            let text = textNode.nodeValue;
+            let priceNumber = parseInt(price, 10);
 
-            if (
-                (
-                    text.indexOf('EUR') !== -1 ||
-                    text.indexOf('Eur') !== -1 ||
-                    text.indexOf('€') !== -1 ||
-                    text.indexOf('EURO') !== -1 ||
-                    text.indexOf('Euro') !== -1
-                ) &&
-                currentNode.className.indexOf('calculated') === -1
-            ) {
-                let price = textNode.nodeValue.replace(/[^0-9,]/g, '').replace(/,/g, '.');
-                let priceNumber = parseInt(price, 10);
+            if (typeof priceNumber === 'number') {
+                let betterPrice = (priceNumber * .97).toFixed(2);
+                currentNode.className += Flag.WHITESPACE + Flag.CLASS_EXCLUDE_ITEM;
+                currentNode.innerHTML += ' <span class="pitprice ' + Flag.CLASS_EXCLUDE_ITEM + '">PITPRICE* ~' + betterPrice + 'EUR </span>';
 
-                if (typeof priceNumber === 'number') {
-                    let betterPrice = (priceNumber * .97).toFixed(2);
-                    currentNode.className += ' calculated';
-                    currentNode.innerHTML += ' <span class="pitprice calculated">PITPRICE* ~' + betterPrice + 'EUR </span>';
-
-                    matches += 1;
-                }
+                matches += 1;
             }
-        }
-    });
+
+
+        });
 }, 1000);
 
 
