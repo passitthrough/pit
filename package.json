@@ -2,7 +2,6 @@
   "name": "pit",
   "version": "1.0.0",
   "description": "Wir schaffen mehr Transparenz in der Mehrwertsteuer-Senkung!",
-  "main": "dist/pit.js",
   "scripts": {
     "postinstall": "npm run build",
     "build": "NODE_ENV=production npm run build:pit && npm run build:for:chrome && npm run build:for:firefox && npm run build:for:safari",
