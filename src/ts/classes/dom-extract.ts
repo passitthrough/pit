@@ -18,19 +18,19 @@ export class DomExtract {
 
                 if (isTextNode) {
 
-                    let nodeText: string = potentialTextNode.nodeValue;
+                    let nodeText: string = potentialTextNode.nodeValue.toString();
 
                     return (
                         typeof node.className === 'string' &&
-                        node.className.indexOf(Flag.CLASS_EXCLUDE_ITEM) === -1 &&
+                        !node.className.includes(Flag.CLASS_EXCLUDE_ITEM) &&
                         (
-                            nodeText.indexOf(PriceIndication.CURRENCY_SYMBOL) !== -1 ||
-                            nodeText.indexOf(PriceIndication.CURRENCY_PREFIX_UC) !== -1 ||
-                            nodeText.indexOf(PriceIndication.CURRENCY_PREFIX_CC) !== -1 ||
-                            nodeText.indexOf(PriceIndication.CURRENCY_PREFIX_LC) !== -1 ||
-                            nodeText.indexOf(PriceIndication.CURRENCY_NAME_CC) !== -1 ||
-                            nodeText.indexOf(PriceIndication.CURRENCY_NAME_LC) !== -1 ||
-                            nodeText.indexOf(PriceIndication.CURRENCY_NAME_UC) !== -1
+                            nodeText.includes(PriceIndication.CURRENCY_SYMBOL) ||
+                            nodeText.includes(PriceIndication.CURRENCY_PREFIX_UC) ||
+                            nodeText.includes(PriceIndication.CURRENCY_PREFIX_CC) ||
+                            nodeText.includes(PriceIndication.CURRENCY_PREFIX_LC) ||
+                            nodeText.includes(PriceIndication.CURRENCY_NAME_CC) ||
+                            nodeText.includes(PriceIndication.CURRENCY_NAME_LC) ||
+                            nodeText.includes(PriceIndication.CURRENCY_NAME_UC)
                         )
                     );
                 }
@@ -38,8 +38,6 @@ export class DomExtract {
                 return false;
             });
     }
-
-    // TODO maybe update method
 
     private fetchNodes() {
         return this.domNodes = document.querySelectorAll(this.selector);
