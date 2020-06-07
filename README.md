@@ -10,8 +10,11 @@
 Im Rahmen des in der COVID-19 Pandemie beschlossenen Konjunkturpaketes das zum 01. Juli 2020 in Kraft tritt, wird es u.a. 
 eine bis Jahresende befristete Mehrwertsteuersenkung geben.
  
-Doch profitieren davon am Ende wirklich Verbraucher*innen oder wird dies rein bei den Unternehmen hängen bleiben und damit sein Ziel verfehlen?
+Mit dem Mehrwertsteuersenkungsersparnisrechner<sup>&trade;</sup> kannst Du heute schon sehen, was ein Produkt mit 
+durchgereichter MwSt.-Senkung kosten würde. Ob Du Waren zum dem errechneten "Durchreichpreis(en)" auch von Deinem Onlinehändler 
+erhältst, hängt davon ab, ob dieser Dir die MwSt.-Senkung auch entsprechend durchreichen wird.  
 
+Es gilt wachsam die Preise zu beobachten 🦉.
 
 ### Wir wollen dazu beitragen, dies transparenter zu machen. 
 

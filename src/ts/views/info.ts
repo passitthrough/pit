@@ -35,7 +35,7 @@ export const getInfo = (price): Element => {
                          </tr>
                          
                           <tr>
-                            <td class="text-right text-xsmall">Durchreichspreis:</td>     
+                            <td class="text-right text-xsmall">Durchreichpreis:</td>     
                             <td>
                                 <table class="border-top" cellpadding="0" cellspacing="0">
                                     <thead>
