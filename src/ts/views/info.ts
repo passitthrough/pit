@@ -26,8 +26,8 @@ export const getInfo = (price): Element => {
                                    </thead>
                                    <tbody>
                                        <tr>
-                                           <td width="50%" class="text-right text-bold text-green bg-grey pr ${Flag.IGNORE}">${((price) * .02).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
-                                           <td width="50%" class="text-right text-bold text-green ${Flag.IGNORE}">${((price) * .03).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
+                                           <td width="50%" class="text-right text-bold text-green bg-grey pr ${Flag.IGNORE}">${((price / 1.07) * .02).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
+                                           <td width="50%" class="text-right text-bold text-green ${Flag.IGNORE}">${((price / 1.19) * .03).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
                                        </tr>
                                    </tbody>
                                 </table>
@@ -46,8 +46,8 @@ export const getInfo = (price): Element => {
                                    </thead>
                                    <tbody>
                                        <tr>
-                                           <td class="text-medium text-right text-bold text-green bg-grey pr ${Flag.IGNORE}">${((price) * .98).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
-                                           <td class="text-medium text-right text-bold text-green ${Flag.IGNORE}">${((price) * .97).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
+                                           <td class="text-medium text-right text-bold text-green bg-grey pr ${Flag.IGNORE}">${((price / 1.07) * 1.05).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
+                                           <td class="text-medium text-right text-bold text-green ${Flag.IGNORE}">${((price / 1.19) * 1.16).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
                                        </tr>
                                    </tbody>
                                 </table>
