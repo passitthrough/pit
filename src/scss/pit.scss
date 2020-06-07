@@ -11,7 +11,7 @@
   &.pit-hidden {
     pointer-events: none;
     opacity: 0;
-    filter: blur(4px);
+    filter: blur(3px);
   }
 
   background: #ffffff;
@@ -26,13 +26,13 @@
 
   width: 360px;
 
-  border: solid 3px $color-dark;
 
   table {
     width: 100%;
 
     td {
-      vertical-align: top;
+      vertical-align: center;
+      width: 50%;
     }
   }
 
@@ -59,6 +59,7 @@
 
   .text-xsmall {
     font-size: 10px;
+    line-height: 16px;
   }
 
   .text-green {
@@ -78,7 +79,15 @@
   }
 
   .border-top {
-    border-top: solid 2px $color-dark;
+    border-top: solid 2px lighten($color-dark, 42%);
+  }
+
+  .bg-grey {
+    background-color: lighten($color-dark, 84%);
+  }
+
+  .pr{
+    padding-right:4px;
   }
 }
 

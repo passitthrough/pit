@@ -13,14 +13,13 @@ export class DomExtract {
         return this
             .filter
             .call(this.domNodes, function (node: HTMLElement) {
+             console.log(node.childNodes);
                 const potentialTextNode = node.childNodes[0];
                 const isTextNode = !!potentialTextNode && typeof potentialTextNode.nodeValue === 'string';
 
                 if (isTextNode) {
 
                     let nodeText: string = potentialTextNode.nodeValue.toString();
-
-                    console.log(nodeText);
 
                     return (
                         typeof node.className === 'string' &&
@@ -35,8 +34,8 @@ export class DomExtract {
                             nodeText.includes(PriceIndication.CURRENCY_NAME_UC)
                         )
                     );
-                }else{
-                    console.log(potentialTextNode);
+                } else {
+                    console.log('x', node);
                 }
 
                 return false;

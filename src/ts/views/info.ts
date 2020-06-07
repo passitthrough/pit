@@ -5,7 +5,7 @@ export const getInfo = (price): Element => {
     const node = document.createElement('div');
 
 
-    const template = `<table>
+    const template = `<table cellpadding="0" cellspacing="0">
                          <tr>
                             <td class="text-right">aktueller Preis:</td>     
                             <td class=" text-bold text-right text-red ${Flag.IGNORE}">
@@ -15,18 +15,18 @@ export const getInfo = (price): Element => {
                          
                          
                          <tr>
-                            <td class="text-right">Sparpotential:</td>     
+                            <td class="text-right text-xsmall">Sparpotential:</td>     
                             <td>
                                 <table class="border-top" cellpadding="0" cellspacing="0">
                                     <thead>
                                     <tr>
-                                        <th width="50%" class="text-right text-xsmall text-grey">-2% MwSt.</th>
+                                        <th width="50%" class="text-right text-xsmall text-grey bg-grey pr">-2% MwSt.</th>
                                         <th width="50%" class="text-right text-xsmall text-grey">-3% MwSt.</th>
                                     </tr>
                                    </thead>
                                    <tbody>
                                        <tr>
-                                           <td width="50%" class="text-right text-bold text-green ${Flag.IGNORE}">${((price) * .02).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
+                                           <td width="50%" class="text-right text-bold text-green bg-grey pr ${Flag.IGNORE}">${((price) * .02).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
                                            <td width="50%" class="text-right text-bold text-green ${Flag.IGNORE}">${((price) * .03).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
                                        </tr>
                                    </tbody>
@@ -35,18 +35,18 @@ export const getInfo = (price): Element => {
                          </tr>
                          
                           <tr>
-                            <td class="text-right">Durchreichspreis:</td>     
+                            <td class="text-right text-xsmall">Durchreichspreis:</td>     
                             <td>
                                 <table class="border-top" cellpadding="0" cellspacing="0">
                                     <thead>
                                     <tr>
-                                        <th class="text-right text-xsmall text-grey">5% MwSt.</th>
-                                        <th class="text-right text-xsmall text-grey">16% MwSt.</th>
+                                        <th class="text-right text-xsmall text-grey bg-grey pr">bei 5% MwSt.</th>
+                                        <th class="text-right text-xsmall text-grey">bei 16% MwSt.</th>
                                     </tr>
                                    </thead>
                                    <tbody>
                                        <tr>
-                                           <td class="text-medium text-right text-bold text-green ${Flag.IGNORE}">${((price) * .98).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
+                                           <td class="text-medium text-right text-bold text-green bg-grey pr ${Flag.IGNORE}">${((price) * .98).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
                                            <td class="text-medium text-right text-bold text-green ${Flag.IGNORE}">${((price) * .97).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
                                        </tr>
                                    </tbody>
