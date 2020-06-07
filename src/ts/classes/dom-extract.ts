@@ -2,17 +2,17 @@ import {PriceIndication} from '../enums/price-indication';
 import {Flag} from '../enums/flag';
 
 export class DomExtract {
-    private domNodes: NodeListOf<Element>;
+    private domNodes: NodeListOf<HTMLElement>;
     private filter = Array.prototype.filter;
 
     constructor(public selector: string = '*') {
         this.fetchNodes();
     }
 
-    public getTextNodes(): NodeListOf<Element> {
+    public getTextNodes(): NodeListOf<HTMLElement> {
         return this
             .filter
-            .call(this.domNodes, function (node: Element) {
+            .call(this.domNodes, function (node: HTMLElement) {
                 const potentialTextNode = node.childNodes[0];
                 const isTextNode = !!potentialTextNode && typeof potentialTextNode.nodeValue === 'string';
 
@@ -20,9 +20,11 @@ export class DomExtract {
 
                     let nodeText: string = potentialTextNode.nodeValue.toString();
 
+                    console.log(nodeText);
+
                     return (
                         typeof node.className === 'string' &&
-                        !node.className.includes(Flag.CLASS_EXCLUDE_ITEM) &&
+                        !node.className.includes(Flag.IGNORE) &&
                         (
                             nodeText.includes(PriceIndication.CURRENCY_SYMBOL) ||
                             nodeText.includes(PriceIndication.CURRENCY_PREFIX_UC) ||
@@ -33,6 +35,8 @@ export class DomExtract {
                             nodeText.includes(PriceIndication.CURRENCY_NAME_UC)
                         )
                     );
+                }else{
+                    console.log(potentialTextNode);
                 }
 
                 return false;

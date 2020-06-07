@@ -1,9 +1,11 @@
 import {PriceParser} from './price-parser';
 import {Flag} from '../enums/flag';
 import {PriceIndication} from '../enums/price-indication';
+import {getInfo} from '../views/info';
+import {createPopper} from '@popperjs/core';
 
 export interface DomExtendItem {
-    node: Element;
+    node: HTMLElement;
     price: number;
     extend: any;
     applied: boolean;
@@ -13,7 +15,7 @@ export class DomExtend {
     private queue: DomExtendItem[] = [];
     private priceParser = new PriceParser();
 
-    constructor(private textNodes: NodeListOf<Element>) {
+    constructor(private textNodes: NodeListOf<HTMLElement>) {
         if (textNodes.length > 0) {
             this.process();
         }
@@ -22,8 +24,28 @@ export class DomExtend {
     public apply() {
         this.queue
             .forEach((queueItem) => {
-                queueItem.node.className += Flag.WHITESPACE + Flag.CLASS_EXCLUDE_ITEM;
-                queueItem.node.innerHTML += queueItem.extend;
+                const tooltip = queueItem.extend();
+
+                queueItem.node.className += Flag.WHITESPACE + Flag.IGNORE + Flag.WHITESPACE + 'has-pit-dialog';
+                queueItem.node.appendChild(tooltip);
+
+
+                queueItem.node.onmouseover = () => {
+                    console.log('over');
+                    tooltip.className = tooltip.className.replace(/pit-hidden/g, '');
+                };
+
+                queueItem.node.onmouseout = () => {
+                    tooltip.className += ' pit-hidden';
+                };
+
+                requestAnimationFrame(() => {
+                    // Pass the button, the tooltip, and some options, and Popper will do the
+                    // magic positioning for you:
+                    createPopper(queueItem.node, tooltip, {
+                        placement: 'right',
+                    });
+                });
 
                 queueItem.applied = true;
             });
@@ -37,20 +59,17 @@ export class DomExtend {
             });
     }
 
-    private addDomExtendItem(textNode: Element) {
+    private addDomExtendItem(textNode: HTMLElement) {
         const price = this.priceParser.parse(textNode.childNodes[0].nodeValue);
 
         if (typeof price === 'number') {
 
-            // TODO some kind of better/stable calc "engine"
-            let pitPrice = (price * .97).toFixed(2);
-
-
             this.queue.push({
                 node: textNode,
                 price: price,
-                // TODO create element scripted/templated
-                extend: '<span class="pitprice ' + Flag.CLASS_EXCLUDE_ITEM + '">-3%MwSt. ~' + pitPrice + PriceIndication.CURRENCY_SYMBOL + '</span>',
+                extend: () => {
+                    return getInfo(price);
+                },
                 applied: false
             });
         }
