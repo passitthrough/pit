@@ -15,7 +15,7 @@ export class DomExtend {
     private queue: DomExtendItem[] = [];
     private priceParser = new PriceParser();
 
-    constructor(private textNodes: NodeListOf<HTMLElement>) {
+    constructor(private textNodes: NodeListOf<HTMLElement> | HTMLElement[]) {
         if (textNodes.length > 0) {
             this.process();
         }
@@ -31,8 +31,7 @@ export class DomExtend {
 
 
                 queueItem.node.onmouseover = () => {
-                    console.log('over');
-                    tooltip.className = tooltip.className.replace(/pit-hidden/g, '');
+                    tooltip.className = tooltip.className.replace(/ pit-hidden/g, '');
                 };
 
                 queueItem.node.onmouseout = () => {
@@ -40,11 +39,11 @@ export class DomExtend {
                 };
 
                 requestAnimationFrame(() => {
-                    // Pass the button, the tooltip, and some options, and Popper will do the
-                    // magic positioning for you:
-                    createPopper(queueItem.node, tooltip, {
-                        placement: 'right',
-                    });
+                    createPopper(queueItem.node,
+                        tooltip,
+                        {
+                            placement: 'right',
+                        });
                 });
 
                 queueItem.applied = true;
@@ -60,7 +59,15 @@ export class DomExtend {
     }
 
     private addDomExtendItem(textNode: HTMLElement) {
-        const price = this.priceParser.parse(textNode.childNodes[0].nodeValue);
+        let rawPriceString = '';
+
+        textNode.childNodes
+            .forEach((childNode) => {
+                rawPriceString += (!!childNode.nodeValue) ? childNode.nodeValue.toString() : '';
+            });
+
+
+        const price = this.priceParser.parse(rawPriceString.trim());
 
         if (typeof price === 'number') {
 

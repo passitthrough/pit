@@ -23,6 +23,7 @@
   padding: 4px 8px;
   font-size: 13px;
   border-radius: 4px;
+  border: solid 2px $color-dark;
 
   width: 360px;
 
@@ -86,8 +87,8 @@
     background-color: lighten($color-dark, 84%);
   }
 
-  .pr{
-    padding-right:4px;
+  .pr {
+    padding-right: 4px;
   }
 }
 

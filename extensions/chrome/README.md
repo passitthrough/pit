@@ -4,6 +4,8 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/passitthrough.svg?style=social)](https://twitter.com/passitthrough)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 
+## Der Mehrwertsteuersenkungsersparnisrechner<sup>&trade;</sup>
+
 ### Die Situation
 Im Rahmen des in der COVID-19 Pandemie beschlossenen Konjunkturpaketes das zum 01. Juli 2020 in Kraft tritt, wird es u.a. 
 eine bis Jahresende befristete Mehrwertsteuersenkung geben.
