@@ -35,7 +35,7 @@ export class DomExtract {
                         )
                     );
                 } else {
-                    console.log('x', node);
+
                 }
 
                 return false;
