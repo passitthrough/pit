@@ -1,6 +1,6 @@
 {
   "name": "pit-extension",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Wir schaffen mehr Transparenz in der Mehrwertsteuer-Senkung!",
   "scripts": {
     "postinstall": "pwd && ls -lah && npm run build",
