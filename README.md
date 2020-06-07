@@ -1,5 +1,6 @@
 ![alt text][banner]
 
+
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Twitter Follow](https://img.shields.io/twitter/follow/passitthrough.svg?style=social)](https://twitter.com/passitthrough)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
@@ -15,6 +16,9 @@ durchgereichter MwSt.-Senkung kosten würde. Ob Du Waren zum dem errechneten "Du
 erhältst, hängt davon ab, ob dieser Dir die MwSt.-Senkung auch entsprechend durchreichen wird.  
 
 Es gilt wachsam die Preise zu beobachten 🦉.
+
+![alt text][screenshot]
+
 
 ### Wir wollen dazu beitragen, dies transparenter zu machen. 
 
@@ -107,6 +111,7 @@ Zeitraum bis zum Inkrafttreten der neuen Mehrwertsteuersätze.
 
 [Spiegel - Der große Knackpunkt der niedrigen Mehrwertsteuer]: https://www.spiegel.de/wirtschaft/service/corona-konjunkturpaket-der-grosse-knackpunkt-der-niedrigen-mehrwertsteuer-a-d3b357fc-e472-4db8-aa09-53d9faff6859
 [Google]: https://developer.chrome.com/extensions/getstarted
+[screenshot]: https://i.imgur.com/LKZYhd3.png "Screenshot"
 [banner]: https://i.imgur.com/JFFsB96.png "PIT Banner"
 [installchromemanually]: https://developer.chrome.com/static/images/get_started/load_extension.png "Chrome install extension manually"
 [zip Archiv]:https://github.com/passitthrough/pit/archive/master.zip "Extension Download"
