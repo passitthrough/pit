@@ -7,6 +7,10 @@
 
 ## Der Mehrwertsteuersenkungsersparnisrechner<sup>&trade;</sup>
 
+Dieses Tool kann als Extension über
+ - den [Google Web Store] installiert werden (bevorzugt) 
+ - oder manuell für Entwickler s. "manuelle Installation"
+
 ### Die Situation
 Im Rahmen des in der COVID-19 Pandemie beschlossenen Konjunkturpaketes das zum 01. Juli 2020 in Kraft tritt, wird es u.a. 
 eine bis Jahresende befristete Mehrwertsteuersenkung geben.
@@ -110,6 +114,7 @@ Zeitraum bis zum Inkrafttreten der neuen Mehrwertsteuersätze.
 - [Spiegel - Der große Knackpunkt der niedrigen Mehrwertsteuer]
 
 [Spiegel - Der große Knackpunkt der niedrigen Mehrwertsteuer]: https://www.spiegel.de/wirtschaft/service/corona-konjunkturpaket-der-grosse-knackpunkt-der-niedrigen-mehrwertsteuer-a-d3b357fc-e472-4db8-aa09-53d9faff6859
+[Google Web Store]: https://chrome.google.com/webstore/detail/pit/henbiagjmpebklgibkbgkjhcdnmggemd
 [Google]: https://developer.chrome.com/extensions/getstarted
 [screenshot]: https://i.imgur.com/LKZYhd3.png "Screenshot"
 [banner]: https://i.imgur.com/JFFsB96.png "PIT Banner"
