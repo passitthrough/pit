@@ -20,7 +20,7 @@
 
   color: #333;
   font-weight: bold;
-  padding: 4px 8px;
+  padding: 4px;
   font-size: 13px;
   border-radius: 4px;
   border: solid 2px $color-dark;
@@ -32,9 +32,18 @@
     width: 100%;
 
     td {
-      vertical-align: center;
-      width: 50%;
+
+      vertical-align: middle;
+      //   width: 50%;
     }
+  }
+
+  .valign-top {
+    vertical-align: top;
+  }
+
+  .valign-bottom {
+    vertical-align: bottom;
   }
 
 
@@ -51,7 +60,7 @@
   }
 
   .text-large {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .text-medium {
@@ -88,7 +97,7 @@
   }
 
   .pr {
-    padding-right: 4px;
+    padding-right: 6px;
   }
 }
 

@@ -5,56 +5,56 @@ export const getInfo = (price): Element => {
     const node = document.createElement('div');
 
 
-    const template = `<table cellpadding="0" cellspacing="0">
-                         <tr>
-                            <td class="text-right">aktueller Preis:</td>     
-                            <td class=" text-bold text-right text-red ${Flag.IGNORE}">
-                                ${price.toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}
-                            </td>    
-                         </tr>
-                         
-                         
-                         <tr>
-                            <td class="text-right text-xsmall">Sparpotential:</td>     
-                            <td>
-                                <table class="border-top" cellpadding="0" cellspacing="0">
-                                    <thead>
-                                    <tr>
-                                        <th width="50%" class="text-right text-xsmall text-grey bg-grey pr">-2% MwSt.</th>
-                                        <th width="50%" class="text-right text-xsmall text-grey">-3% MwSt.</th>
-                                    </tr>
-                                   </thead>
-                                   <tbody>
-                                       <tr>
-                                           <td width="50%" class="text-right text-bold text-green bg-grey pr ${Flag.IGNORE}">${((price / 1.07) * .02).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
-                                           <td width="50%" class="text-right text-bold text-green ${Flag.IGNORE}">${((price / 1.19) * .03).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
-                                       </tr>
-                                   </tbody>
+    const template = `  <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="valign-top text-right pr">Aktueller Preis</td>
+                            <td class="valign-top bg-grey">
+                                <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                  
+                                    <td class="text-center" colspan="2">
+                                        nach MwSt-Senkung
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-grey text-center">16%</td>
+                                    <td class="text-grey text-center">5%</td>
+                                </tr>
                                 </table>
                             </td>
-                         </tr>
-                         
-                          <tr>
-                            <td class="text-right text-xsmall">Durchreichpreis:</td>     
-                            <td>
-                                <table class="border-top" cellpadding="0" cellspacing="0">
-                                    <thead>
+                        </tr>
+                        <tr>
+                            <td class="text-bold text-right text-large valign-top pr ${Flag.IGNORE}">
+                                ${price.toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                           </td>
+                            <td class="bg-grey">
+                                <table cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <th class="text-right text-xsmall text-grey bg-grey pr">bei 5% MwSt.</th>
-                                        <th class="text-right text-xsmall text-grey">bei 16% MwSt.</th>
+                                        <td class="text-large text-center text-green text-bold ${Flag.IGNORE}">
+                                           ${((price / 1.19) * 1.16).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                        </td>
+                                          <td class="text-large text-center text-green text-bold ${Flag.IGNORE}">
+                                           ${((price / 1.07) * 1.05).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                        </td>
                                     </tr>
-                                   </thead>
-                                   <tbody>
-                                       <tr>
-                                           <td class="text-medium text-right text-bold text-green bg-grey pr ${Flag.IGNORE}">${((price / 1.07) * 1.05).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
-                                           <td class="text-medium text-right text-bold text-green ${Flag.IGNORE}">${((price / 1.19) * 1.16).toFixed(2)} ${PriceIndication.CURRENCY_SYMBOL}</td>
-                                       </tr>
-                                   </tbody>
+                                    <tr>
+                                        <td class="text-xsmall text-center text-bold">
+                                            Ersparnis 
+                                            <span class="text-bold text-green ${Flag.IGNORE}">
+                                                ${(price - ((price / 1.07) * 1.05)).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                            </span>
+                                        </td>
+                                        <td class="text-xsmall text-center text-bold">
+                                            Ersparnis 
+                                            <span class="text-bold text-green ${Flag.IGNORE}">
+                                                ${(price - ((price / 1.19) * 1.16)).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                            </span>
+                                        </td>
+                                    </tr>
                                 </table>
                             </td>
-                         </tr>
-                     </table>
-    `;
+                        </tr>
+                        </table>`;
 
     node.dataset['role'] = 'tooltip';
     node.className = `pit pit-hidden ${Flag.IGNORE}`;

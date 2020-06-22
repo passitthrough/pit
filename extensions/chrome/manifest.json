@@ -1,6 +1,6 @@
 {
   "name": "PIT",
-  "version": "1.0",
+  "version": "1.1",
   "description": "PIT - Der Mehrwertsteuersenkungsersparnisumrechner",
   "permissions": [
     "activeTab"
@@ -24,6 +24,8 @@
   "manifest_version": 2,
   "content_scripts": [
     {
+      "run_at": "document_end",
+      "all_frames": false,
       "js": [
         "pit.js"
       ],
