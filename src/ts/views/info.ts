@@ -25,29 +25,29 @@ export const getInfo = (price): Element => {
                         </tr>
                         <tr>
                             <td class="text-bold text-right text-large valign-top pr ${Flag.IGNORE}">
-                                ${price.toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                ${price.toFixed(2).replace('.', ',')}${PriceIndication.CURRENCY_SYMBOL}
                            </td>
                             <td class="bg-grey">
                                 <table cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td class="text-large text-center text-green text-bold ${Flag.IGNORE}">
-                                           ${((price / 1.19) * 1.16).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                            ${((price / 1.07) * 1.05).toFixed(2).replace('.', ',')}${PriceIndication.CURRENCY_SYMBOL}
                                         </td>
                                           <td class="text-large text-center text-green text-bold ${Flag.IGNORE}">
-                                           ${((price / 1.07) * 1.05).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                            ${((price / 1.19) * 1.16).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-xsmall text-center text-bold">
                                             Ersparnis 
                                             <span class="text-bold text-green ${Flag.IGNORE}">
-                                                ${(price - ((price / 1.07) * 1.05)).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                                ${(price - ((price / 1.07) * 1.05)).toFixed(2).replace('.', ',')}${PriceIndication.CURRENCY_SYMBOL}
                                             </span>
                                         </td>
                                         <td class="text-xsmall text-center text-bold">
                                             Ersparnis 
                                             <span class="text-bold text-green ${Flag.IGNORE}">
-                                                ${(price - ((price / 1.19) * 1.16)).toFixed(2).replace('.',',')}${PriceIndication.CURRENCY_SYMBOL}
+                                                ${(price - ((price / 1.19) * 1.16)).toFixed(2).replace('.', ',')}${PriceIndication.CURRENCY_SYMBOL}
                                             </span>
                                         </td>
                                     </tr>
