@@ -117,7 +117,7 @@ Zeitraum bis zum Inkrafttreten der neuen Mehrwertsteuersätze.
 [Spiegel - Der große Knackpunkt der niedrigen Mehrwertsteuer]: https://www.spiegel.de/wirtschaft/service/corona-konjunkturpaket-der-grosse-knackpunkt-der-niedrigen-mehrwertsteuer-a-d3b357fc-e472-4db8-aa09-53d9faff6859
 [Google Web Store]: https://chrome.google.com/webstore/detail/pit/henbiagjmpebklgibkbgkjhcdnmggemd
 [Google]: https://developer.chrome.com/extensions/getstarted
-[screenshot]: https://i.imgur.com/z9WOu1s.png "Screenshot"
+[screenshot]: https://i.imgur.com/ivPPZXJ.png "Screenshot"
 [banner]: https://i.imgur.com/JFFsB96.png "PIT Banner"
 [installchromemanually]: https://developer.chrome.com/static/images/get_started/load_extension.png "Chrome install extension manually"
 [zip Archiv]:https://github.com/passitthrough/pit/archive/master.zip "Extension Download"

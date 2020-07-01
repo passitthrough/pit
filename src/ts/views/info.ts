@@ -17,8 +17,8 @@ export const getInfo = (price): Element => {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="text-grey text-center">16%</td>
                                     <td class="text-grey text-center">5%</td>
+                                    <td class="text-grey text-center">16%</td>
                                 </tr>
                                 </table>
                             </td>

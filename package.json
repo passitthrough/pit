@@ -1,6 +1,6 @@
 {
   "name": "pit-extension",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Der Mehrwertsteuersenkungsersparnisrechner",
   "scripts": {
     "postinstall": "pwd && ls -lah && npm run build",
