@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.4.3",
-    "parcel": "^1.12.4",
+    "parcel": "^2.8.2",
     "parcel-plugin-inline-source": "^1.0.0",
     "posthtml-include": "^1.4.3",
     "sass": "^1.26.9",
